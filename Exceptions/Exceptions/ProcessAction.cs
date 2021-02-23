@@ -39,7 +39,7 @@ namespace Exceptions
                 ShowExceptionDetails(ex);
                 Console.WriteLine(ex.Message);
             }
-            catch (NullReferenceException ex)
+            catch(NullReferenceException ex)
             {
                 Console.WriteLine("NullReferenceException");
                 ShowExceptionDetails(ex);
