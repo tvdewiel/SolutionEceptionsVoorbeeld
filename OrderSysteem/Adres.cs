@@ -8,7 +8,7 @@ namespace AdresSysteem
     public class Adres
     {
         public Gemeente GemeenteNaam { get; private set; }
-        private int Postcode;
+        public int Postcode { get; private set; }
 
         public Adres(string gemeente, string straatnaam, string huisnummer)
         {
@@ -38,7 +38,7 @@ namespace AdresSysteem
             {
                 if (!char.IsDigit(huisnummer.ToCharArray()[0]))
                 {
-                    HuisnummerException ae = new HuisnummerException("Straatnaam invalid");
+                    HuisnummerException ae = new HuisnummerException("huisnummer invalid");
                     ZetxceptionInfo(gemeente, straatnaam, huisnummer, ae);
                     throw ae;
                 }
@@ -46,7 +46,9 @@ namespace AdresSysteem
             }
             catch(Exception ex)
             {
-                throw new HuisnummerException("huisnummer invalid", ex);
+                HuisnummerException ae = new HuisnummerException("huisnummer invalid");
+                ZetxceptionInfo(gemeente, straatnaam, huisnummer, ae);
+                throw ae;
             }
                 
         }
@@ -74,7 +76,6 @@ namespace AdresSysteem
                    Straatnaam == adres.Straatnaam &&
                    Huisnummer == adres.Huisnummer;
         }
-
         public override int GetHashCode()
         {
             return HashCode.Combine(GemeenteNaam, Straatnaam, Huisnummer);

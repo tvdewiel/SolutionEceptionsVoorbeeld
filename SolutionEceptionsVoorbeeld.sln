@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdresSysteem", "OrderSystee
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp_1", "ConsoleApp_1\ConsoleApp_1.csproj", "{4DAD38C9-121C-4B2F-AD25-9A52DDBFE0F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProjectAdresSysteem", "XUnitTestProjectAdresSysteem\XUnitTestProjectAdresSysteem.csproj", "{EDB2C89B-8292-44F0-A392-40097B118B76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{4DAD38C9-121C-4B2F-AD25-9A52DDBFE0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DAD38C9-121C-4B2F-AD25-9A52DDBFE0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DAD38C9-121C-4B2F-AD25-9A52DDBFE0F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDB2C89B-8292-44F0-A392-40097B118B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB2C89B-8292-44F0-A392-40097B118B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB2C89B-8292-44F0-A392-40097B118B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB2C89B-8292-44F0-A392-40097B118B76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EE27650A-C7C4-4007-900A-0FE8B0CA56B3} = {A5DC9F0F-F2DB-4985-B41C-609D58D43214}
 		{4DAD38C9-121C-4B2F-AD25-9A52DDBFE0F2} = {A5DC9F0F-F2DB-4985-B41C-609D58D43214}
+		{EDB2C89B-8292-44F0-A392-40097B118B76} = {A5DC9F0F-F2DB-4985-B41C-609D58D43214}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DB7FB5C-8E80-4556-AE69-E1717B9AA9C5}
