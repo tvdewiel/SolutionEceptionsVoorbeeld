@@ -30,7 +30,8 @@ namespace XUnitTestProjectAdresSysteem
         [InlineData("gent", "kerkstraat", "1", Gemeente.Gent, 9000)]
         [InlineData("aalst", "Kerkstraat", "14b", Gemeente.Aalst, 9300)]
         [InlineData("lokeren", "kerk", "14b", Gemeente.Lokeren, 9160)]
-        public void Test_ctr_valid_withTheory(string gemeentenaam, string straat, string huisnr, Gemeente gemeente, int postcode)
+        public void Test_ctr_valid_withTheory(string gemeentenaam, string straat, 
+            string huisnr, Gemeente gemeente, int postcode)
         {
             Adres a = new Adres(gemeentenaam, straat, huisnr);
 

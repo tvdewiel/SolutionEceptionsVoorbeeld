@@ -15,7 +15,7 @@ namespace XUnitTestProjectAdresSysteem
         {
             a1 = new Adres("gent", "lostraat", "12");
             a2 = new Adres("gent", "lostraat", "14");
-            a3 = new Adres("gent", "lostraat", "12");
+            a3 = new Adres("Gent", "lostraat", "12");
         }
 
         [Fact]

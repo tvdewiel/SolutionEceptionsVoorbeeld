@@ -26,7 +26,6 @@ namespace AdresSysteem
             {
                 throw new GemeenteException("Gemeentenaam invalid", ex);
             }
-
             if (string.IsNullOrWhiteSpace(straatnaam))
             {
                 StraatnaamException ae = new StraatnaamException("Straatnaam invalid");
@@ -50,7 +49,6 @@ namespace AdresSysteem
                 ZetxceptionInfo(gemeente, straatnaam, huisnummer, ae);
                 throw ae;
             }
-                
         }
         private void ZetxceptionInfo(string gemeente, string straatnaam, string huisnummer,Exception e)
         {
