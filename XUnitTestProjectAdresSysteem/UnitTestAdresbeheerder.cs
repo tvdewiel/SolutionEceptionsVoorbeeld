@@ -8,12 +8,21 @@ namespace XUnitTestProjectAdresSysteem
 {
     public class UnitTestAdresbeheerder
     {
+        private Adres a1, a2,a3;
+        private Adresbeheerder ab;
+
+        public UnitTestAdresbeheerder()
+        {
+            a1 = new Adres("gent", "lostraat", "12");
+            a2 = new Adres("gent", "lostraat", "14");
+            a3 = new Adres("gent", "lostraat", "12");
+        }
+
         [Fact]
         public void Test_VoegAdresToe_valid()
         {
-            Adres a1 = new Adres("gent", "lostraat", "12");
-            Adres a2 = new Adres("gent", "lostraat", "14");
-            Adresbeheerder ab = new Adresbeheerder();
+            
+            ab = new Adresbeheerder();
             ab.VoegAdresToe(a1);
 
             Assert.Single(ab.Adressen);
@@ -27,15 +36,13 @@ namespace XUnitTestProjectAdresSysteem
         [Fact]
         public void Test_VoegAdresToe_invalid()
         {
-            Adres a1 = new Adres("gent", "lostraat", "12");
-            Adres a2 = new Adres("gent", "lostraat", "12");
-            Adresbeheerder ab = new Adresbeheerder();
+            ab = new Adresbeheerder();
             ab.VoegAdresToe(a1);
 
             Assert.Single(ab.Adressen);
             Assert.Contains(a1, ab.Adressen);
 
-            Assert.Throws<AdresbeheerderException>(() => ab.VoegAdresToe(a2));
+            Assert.Throws<AdresbeheerderException>(() => ab.VoegAdresToe(a3));
             Assert.Single(ab.Adressen);
             Assert.Contains(a1, ab.Adressen);
         }
